@@ -1,0 +1,25 @@
+
+.container{
+    height:100vh;
+    background-image:url("src/assets/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top: 150px;
+    
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    width:25vw;
+    color:black;
+    margin-top:0px;
+    margin-left: 500px;
+    border-radius: 10px;
+    background-color:beige;
+    padding: 25px;
+}
+
+a{
+    text-decoration: none;
+}
