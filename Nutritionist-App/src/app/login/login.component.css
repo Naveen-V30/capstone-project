@@ -1,25 +1,43 @@
-
-.container{
-    height:100vh;
-    background-image:url("src/assets/login-bg.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    padding-top: 150px;
-    
-}
-
-.sub-container{
-    display: flex;
-    flex-direction: column;
-    width:25vw;
-    color:black;
-    margin-top:0px;
-    margin-left: 500px;
-    border-radius: 10px;
-    background-color:beige;
-    padding: 25px;
-}
-
-a{
+mat-card {
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    max-height: 800px;
+  }
+  
+  .header{
+    text-align: center;
+  
+  }
+  .full-width {
+    width: 80%;
+  }
+  
+  .button-row {
+    padding-top: 5px;
+  }
+  
+  .button-row a {
+    margin-right: 8px;
+    text-align: center;
+  }
+  
+  .forget-password{
+    padding-left: 0px;
+  }
+  
+  .input{
+    padding-top: 10px;
+  }
+  
+  .contentBody {
+    padding: 60px 1rem;
+    background :#1b6ca8;
+    display: block;
+  }
+  
+  .aLink{
+    float: right;
+    padding-right: 60px;
     text-decoration: none;
-}
+  }

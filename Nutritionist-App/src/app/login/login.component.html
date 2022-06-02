@@ -1,17 +1,32 @@
-<div class="container">
-    <form>
-    <div class="sub-container">
+<mat-card>
+    <mat-card-content>
+    <div class="header">
         <h2>Login</h2>
-        <label>Email / Username</label>
-        <input type="text" placeholder="&emsp;&emsp;Enter your email"  name="username" required/>
-    <br>
-    <label>Password</label>
-    <input type="password" placeholder="&emsp;&emsp;Enter password" name="password" required/>
-    <br>
-    <button>Login</button>
-    <br>
-    
-    <a routerLink="/signup">sign-up</a>
     </div>
-</form>
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+    <div class="input">
+        <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="text" placeholder="&emsp;&emsp;Enter your email" required/>
+        <mat-error *ngIf="!loginForm.controls['email'].valid">Enter Valid e-mail</mat-error>
+    </mat-form-field>
     </div>
+
+    <div>
+    <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Password</mat-label>
+    <input formControlName="password" matInput type="password" placeholder="&emsp;&emsp;Enter password" required/>
+    <mat-error *ngIf="!loginForm.controls['password'].valid">Enter Valid Password</mat-error>
+    </mat-form-field>
+    <span>
+        <a class="text-link" class="aLink" routerLink="/forgetpassword">Forgot Password?</a>
+      </span>
+    </div>
+    <button mat-flat-button color="primary" [disabled]="!loginForm.valid">Login</button>
+    </form>
+
+    <div class="botton-row">
+    <a routerLink="/signup">Sign-up</a>
+    </div>
+</mat-card-content>
+</mat-card>
