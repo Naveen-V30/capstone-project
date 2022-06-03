@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         this.loginForm.reset();
         this.router.navigate(['dashboard']);
       }else{
-        alert("Please sign up before login!!");
+        alert("Password/email id mismatch!!");
       }
     },error:()=>{
       alert("Something went wrong!!")
