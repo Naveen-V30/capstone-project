@@ -1,21 +1,36 @@
-<div class="container">
-<form>
-    <div class="sub-container">
+<mat-card>
+        <mat-card-content>
+<div class="header">
         <h2>sign-up</h2>
-        <labeL>First name </labeL>
-        <input type="text" placeholder="&emsp;&emsp;Enter your first name" name="firstname" required/>
-<br>
-        <label>Last name </label>
-        <input type="text" placeholder="&emsp;&emsp;Enter your last name" name="lastname" required />
-<br>
-        <label>Email</label>
-        <input type="text" placeholder="&emsp;&emsp;Enter your email" name="email" required/>
-<br>
-        <label>Password </label>
-        <input type="text" placeholder="&emsp;&emsp;Enter your password" name="password" required/>
-        <br>
-        <button>signup</button>
-    </div>
-        
-</form>
 </div>
+<form (ngSubmit)="onSignup()" name="signupForm" [formGroup]="signupForm">
+    <div class="input">
+        <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput type="text" placeholder="&emsp;&emsp;Enter your name" required/>
+        <mat-error *ngIf="!signupForm.controls['name'].valid">Enter Valid User Name</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="text" placeholder="&emsp;&emsp;Enter your email" required/>
+        <mat-error *ngIf="!signupForm.controls['email'].valid">Enter Valid e-mail</mat-error>
+    </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" placeholder="&emsp;&emsp;Enter password" required/>
+        <mat-error *ngIf="!signupForm.controls['password'].valid">Enter Valid Password</mat-error>
+        </mat-form-field>
+    </div>
+    <button mat-flat-button color="primary" [disabled]="!signupForm.valid">SIGN UP</button>  
+</form>
+<br>
+<div class="botton-row">
+        <a routerLink="/login">Already have an account? Login here</a>
+        </div>
+</mat-card-content>
+</mat-card>

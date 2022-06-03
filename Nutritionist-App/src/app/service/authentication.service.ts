@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 
 export interface loginForm{
+  name:string;
   email:string;
   password:string;
 }
