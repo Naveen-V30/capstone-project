@@ -16,7 +16,11 @@ export class AuthenticationService {
 
   constructor(private http:HttpClient) { }
 
-  login(loginForm:loginForm){
-    return this.http.post<any>('http:/localhost:3000/login',{email:loginForm.email,password:loginForm.password})
+  postuser(data:any){
+    return this.http.post<any>("http://localhost:3000/users/",data);
+  }
+
+  getuser(){
+    return this.http.get<any>("http://localhost:3000/users/");
   }
 }

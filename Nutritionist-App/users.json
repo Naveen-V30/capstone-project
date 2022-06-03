@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "naveen",
+      "email": "jaighcubc@gmail.com",
+      "password": "iugyubhnj",
+      "id": 1
+    },
+    {
+      "name": "kumar",
+      "email": "cugdyyb@gmail.com",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "name": "naveen",
+      "email": "aigcwcnjv@gmail.com",
+      "password": "cwdicbj",
+      "id": 3
+    },
+    {
+      "name": "Karthik",
+      "email": "ghusgcb@gmail.com",
+      "password": "1234567",
+      "id": 4
+    },
+    {
+      "name": "Naveen",
+      "email": "hucgdb@gmail.com",
+      "password": "12345678",
+      "id": 5
+    },
+    {
+      "name": "Naveen",
+      "email": "gvnkarthik2000@gmail.com",
+      "password": "1234567",
+      "id": 6
+    },
+    {
+      "name": "Naveen",
+      "email": "1234@gmail.com",
+      "password": "1234567",
+      "id": 7
+    }
+  ]
+}
