@@ -8,14 +8,16 @@ import { ApiService } from '../service/api.service';
 })
 export class DashboardComponent implements OnInit {
 
-
+  foodlist:any=[];
   constructor(private apiService : ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getfoodlist().subscribe((data)=>{
-      console.log(data);
-  
+    this.apiService.getfoodlist().subscribe(data=>{
+      console.warn(data);
+      this.foodlist=data;
     });
   }
+
+ 
 
 }

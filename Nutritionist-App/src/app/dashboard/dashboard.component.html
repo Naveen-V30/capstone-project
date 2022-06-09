@@ -1,2 +1,15 @@
 <app-header></app-header>
-<p>dashboard works!</p>
+<h2>Displaying data from api</h2>
+<table>
+    <tr>
+        <td>Food name</td>
+        <td>Brand</td>
+        <td>published date</td>
+    </tr>
+    <tr *ngFor="let item of foodlist">
+        <td>{{item.description}}</td>
+        <td>{{item.brandOwner}}</td>
+        <td>{{item.publicationDate}}</td>
+    </tr>
+</table>
+
