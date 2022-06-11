@@ -7,7 +7,7 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+ 
   foodlist:any=[];
   constructor(private apiService : ApiService) { }
 
@@ -16,6 +16,13 @@ export class DashboardComponent implements OnInit {
       console.warn(data);
       this.foodlist=data;
     });
+  }
+
+  search(food:String){
+   food=food.split(" ").join("%20");
+    this.apiService.searchfood(food).subscribe(data=>{
+      console.log(data);
+    })
   }
 
  
