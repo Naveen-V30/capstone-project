@@ -4,8 +4,8 @@
 <input type="text" name="searchfood" #food placeholder="search..." ><button (click)="search(food.value)"><mat-icon>search</mat-icon></button>
 </div>
 <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="20%" *ngFor="let item of foodlist">
+    <div fxLayout="row wrap" fxLayoutGap="15px grid">
+      <div fxFlex="25%" *ngFor="let item of foodlist">
         <mat-card class="mat-elevation-z4">
           <img
             mat-card-image
