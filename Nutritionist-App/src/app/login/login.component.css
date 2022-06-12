@@ -1,8 +1,29 @@
+.container{
+  width: 100vw;
+  height:100vh;
+  background-image: url("https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size:100vmax;
+}
 mat-card {
     max-width: 600px;
     margin: 2em auto;
     text-align: center;
     max-height: 800px;
+    background-color:rgb(190, 208, 215);
+  }
+
+  .sub-container{
+    width:35vw;
+    margin-left: 25vw;
+    position:absolute;
+    top: 120px;
+    left: 120px;
+  }
+
+  .sub-container button{
+    background-color:tomato;
+    color: aliceblue;
   }
   
   .header{
@@ -41,3 +62,9 @@ mat-card {
     padding-right: 60px;
     text-decoration: none;
   }
+
+  .signuplink{
+    text-decoration: none;
+    color:teal;
+  }
+

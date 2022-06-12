@@ -1,11 +1,23 @@
 
 .container{
-    height:100vh;
-    background-image:url("src/assets/login-bg.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    padding-top: 150px;
-    
+  width: 100vw;
+  height:100vh;
+  background-image: url("https://thumbs.dreamstime.com/b/food-background-breakfast-yogurt-granola-muesli-strawberries-banner-image-website-gray-concrete-table-top-view-214357125.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sub-container{
+  width:35vw;
+  margin-left: 25vw;
+  position:absolute;
+  top: 120px;
+  left: 120px;
+}
+
+.sub-container button{
+  background-color:tomato;
+  color: aliceblue;
 }
 
 mat-card {
@@ -13,6 +25,7 @@ mat-card {
     margin: 2em auto;
     text-align: center;
     max-height: 800px;
+    background-color:lavenderblush;
   }
   
   .header{
@@ -50,4 +63,9 @@ mat-card {
     float: right;
     padding-right: 60px;
     text-decoration: none;
+  }
+
+  .loginlink{
+    text-decoration: none;
+    color:teal;
   }
