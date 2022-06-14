@@ -1,24 +1,27 @@
 <app-header></app-header>
 <h2>Displaying data from api</h2>
 <div class="topnav">
-<input type="text" name="searchfood" #food placeholder="search..." ><button (click)="search(food.value)"><mat-icon>search</mat-icon></button>
+  <input type="text" name="searchfood" #food placeholder="search..." /><button
+    (click)="search(food.value)"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
 </div>
 <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="15px grid">
-      <div fxFlex="25%" *ngFor="let item of foodlist">
-        <mat-card class="mat-elevation-z4">
-          <img
-            mat-card-image
-            src="https://image.shutterstock.com/image-vector/illustration-delicious-tasty-fast-food-600w-602505563.jpg"
-          />
-          <mat-card-content> {{ item.description }} </mat-card-content>
-          <mat-card-content> {{ item.brandowner }} </mat-card-content>
-          <mat-card-actions>
-            <button mat-button color="primary">Add to cart</button>
-            <button mat-button color="accent">Details</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
+  <div fxLayout="row wrap" fxLayoutGap="15px grid">
+    <div fxFlex="25%" *ngFor="let item of foodlist">
+      <mat-card class="mat-elevation-z4">
+        <img
+          mat-card-image
+          src="https://www.nicepng.com/png/detail/214-2148603_you-eat-ready-to-eat-food-icon.png"
+        />
+        <mat-card-content> {{ item.description }} </mat-card-content>
+        <mat-card-content> {{ item.brandowner }} </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary">Add to favourites</button>
+          <button mat-button color="accent">Details</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
-
+</div>
