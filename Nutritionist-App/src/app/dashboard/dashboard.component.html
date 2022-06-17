@@ -1,12 +1,9 @@
 <app-header></app-header>
-<h2>Displaying data from api</h2>
+<br>
 <div class="topnav">
-  <input type="text" name="searchfood" #food placeholder="search..." /><button
-    (click)="search(food.value)"
-  >
-    <mat-icon>search</mat-icon>
-  </button>
+  <input type="text" name="searchfood" #food placeholder="search..." [(ngModel)]="searchitem" (ngModelChange)="search()" />
 </div>
+<br>
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="15px grid">
     <div fxFlex="25%" *ngFor="let item of foodlist">

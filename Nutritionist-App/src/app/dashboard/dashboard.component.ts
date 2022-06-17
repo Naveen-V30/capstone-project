@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
  
   foodlist:any=[];
   constructor(private apiService : ApiService) { }
-
+  searchitem:any;
   ngOnInit(): void {
     this.apiService.getfoodlist().subscribe(data=>{
       console.warn(data);
@@ -18,10 +18,10 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  search(food:String){
-   food=food.split(" ").join("%20");
-    this.apiService.searchfood(food).subscribe(data=>{
-      console.log(data);
+  search(){
+    this.apiService.searchfood(this.searchitem).subscribe((res:any)=>{
+      this.foodlist=res.foods;
+      console.log(res);
     })
   }
 
