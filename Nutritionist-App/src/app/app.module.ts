@@ -18,6 +18,9 @@ import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DetailsComponent } from './details/details.component';
+import { FavouritesComponent } from './favourites/favourites.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     SignUpComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailsComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatListModule,
     HttpClientModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

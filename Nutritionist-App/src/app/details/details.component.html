@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container">
+  <div class="sub">
+  <mat-card>
+<div *ngFor="let item of foodlist">
+  <h2>{{item.description}}</h2>
+      <table>
+        <thead>
+        <tr>
+        <th>NAME OF FOOD NUTRIENT</th>
+        <th>AMOUNT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let nutrients of item.foodNutrients">
+      <td>{{ nutrients.name || nutrients.nutrientName }} </td> 
+      <td>{{ nutrients.amount || nutrients.value + " " +nutrients.unitName}}</td> 
+      </tr>
+    </tbody>
+      </table> 
+    </div>
+</mat-card>
+</div>
+</div>
+
+

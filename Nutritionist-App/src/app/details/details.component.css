@@ -1,0 +1,42 @@
+.container img {
+    height:25vh;
+    width:25vw ;
+}
+
+.details{
+  float: right;
+}
+
+.container{
+    width:100%;
+    height:max-content;
+    min-height: 84.8%;
+    background-image: linear-gradient(to left, rgba(187, 50, 131, 0.52), rgba(249, 200, 41, 0.73)),url("https://www.9-elephants.co.uk/wp-content/uploads/thai-food.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+ table,th,td{
+    border:1px solid;
+ } 
+table{
+ border-collapse: collapse;
+ font-weight:700;
+ width: 28vw;
+  }
+
+mat-card{
+    background-color:thistle;
+    width:30vw;
+    height:auto;
+    opacity: 0.7;
+    font-size:larger;
+    padding-top:25px;
+    padding-bottom: 25px;;
+    margin-left:33vw ;
+    border:1px solid;
+    border-color: white;
+    padding-left: 50px;
+}

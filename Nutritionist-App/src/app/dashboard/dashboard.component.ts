@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
-
+import { Router } from '@angular/router';
+import { FavouritesService } from '../service/favourites.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -9,7 +10,9 @@ import { ApiService } from '../service/api.service';
 export class DashboardComponent implements OnInit {
  
   foodlist:any=[];
-  constructor(private apiService : ApiService) { }
+  totalResults : any;
+  page:number = 1;
+  constructor(private apiService : ApiService,private router:Router,private favourite:FavouritesService) { }
   searchitem:any;
   ngOnInit(): void {
     this.apiService.getfoodlist().subscribe(data=>{
@@ -23,6 +26,15 @@ export class DashboardComponent implements OnInit {
       this.foodlist=res.foods;
       console.log(res);
     })
+  }
+
+  details(id:any){
+    this.router.navigate(["/details"],{state:{data:id}})
+  }
+ 
+  favourites(data:any){
+    this.favourite.setfavourites(data);
+    console.log(data);
   }
 
  

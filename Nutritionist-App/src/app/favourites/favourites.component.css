@@ -1,0 +1,8 @@
+.mat-elevation-z4{
+    background-color:thistle;
+    opacity: 0.9;
+    min-height: 90%;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size:large;
+  }

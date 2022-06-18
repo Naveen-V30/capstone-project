@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="15px grid">
+      <div fxFlex="25%" *ngFor="let item of favourites" >
+        <mat-card class="mat-elevation-z4">
+          <img
+            mat-card-image
+            src="https://www.nicepng.com/png/detail/214-2148603_you-eat-ready-to-eat-food-icon.png"
+          />
+          <mat-card-content> {{ item.description }} </mat-card-content>
+          <mat-card-content>Product Id : {{ item.fdcId }} </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="accent" (click)="removefavourites(item.fdcId)">Remove from favourites</button> 
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+</div>

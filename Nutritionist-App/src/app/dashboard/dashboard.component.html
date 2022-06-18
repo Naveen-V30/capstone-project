@@ -1,4 +1,5 @@
 <app-header></app-header>
+<div class="container">
 <br>
 <div class="topnav">
   <input type="text" name="searchfood" #food placeholder="search..." [(ngModel)]="searchitem" (ngModelChange)="search()" />
@@ -6,19 +7,23 @@
 <br>
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="15px grid">
-    <div fxFlex="25%" *ngFor="let item of foodlist">
+    <div fxFlex="20%" *ngFor="let item of foodlist | paginate:{ itemsPerPage:20, currentPage: page,totalItems: totalResults}" >
       <mat-card class="mat-elevation-z4">
         <img
           mat-card-image
           src="https://www.nicepng.com/png/detail/214-2148603_you-eat-ready-to-eat-food-icon.png"
         />
         <mat-card-content> {{ item.description }} </mat-card-content>
-        <mat-card-content> {{ item.brandowner }} </mat-card-content>
+        <mat-card-content>Product Id : {{ item.fdcId }} </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="primary">Add to favourites</button>
-          <button mat-button color="accent">Details</button>
+        <a routerLink="/favourites"><button mat-button color="primary" (click)="favourites(item)">Add to favourites</button></a>
+        <button mat-button color="accent" (click)="details(item)">Details</button> 
         </mat-card-actions>
       </mat-card>
     </div>
   </div>
+  <div class="pagination">
+  <pagination-controls (pageChange)="page=$event"></pagination-controls>
+  </div>
+</div>
 </div>
