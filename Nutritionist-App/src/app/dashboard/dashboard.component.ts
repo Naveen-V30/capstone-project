@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
 import { Router } from '@angular/router';
+import { state } from '@angular/animations';
 import { FavouritesService } from '../service/favourites.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -18,6 +20,7 @@ export class DashboardComponent implements OnInit {
     this.apiService.getfoodlist().subscribe(data=>{
       console.warn(data);
       this.foodlist=data;
+      this.totalResults = 200;
     });
   }
 
@@ -36,7 +39,5 @@ export class DashboardComponent implements OnInit {
     this.favourite.setfavourites(data);
     console.log(data);
   }
-
- 
 
 }

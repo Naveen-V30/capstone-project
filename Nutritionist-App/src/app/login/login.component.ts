@@ -27,9 +27,12 @@ export class LoginComponent implements OnInit {
     this.jwtservice.generatetoken(this.loginForm.value)
       .subscribe({
         next: (res) => {
+          console.log(res);
+          localStorage.setItem("token",res.toString());
           alert("Login success!!");
           this.loginForm.reset();
           this.router.navigate(['dashboard']);
+         
         }, error: () => {
           alert("Password/email id mismatch!!");
         }

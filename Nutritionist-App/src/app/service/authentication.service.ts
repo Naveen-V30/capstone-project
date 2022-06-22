@@ -21,7 +21,5 @@ export class AuthenticationService {
     return this.http.post<any>("http://localhost:3010/register",data);
   }
 
-  getuser(){
-    return this.http.get<any>("http://localhost:3000/users/");
-  }
+ 
 }

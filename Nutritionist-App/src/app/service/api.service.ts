@@ -9,6 +9,7 @@ export class ApiService {
   
   constructor(private httpClient : HttpClient) { }
 
+  
   getfoodlist(){
     let url = "https://api.nal.usda.gov/fdc/v1/foods/list?dataType=&pageSize=200&pageNumber=1&sortOrder=asc&api_key=4N2BSMKlg5dzqmFqbaFtSQ7fGncxQqNl4baJwzCK";
     return this.httpClient.get(url);

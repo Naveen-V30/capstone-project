@@ -9,14 +9,14 @@ import { FavouritesService } from '../service/favourites.service';
 export class FavouritesComponent implements OnInit {
 
   favourites:any=[];
-  constructor(private favouritesservice:FavouritesService) { }
+  constructor(private favourite:FavouritesService) { }
 
   ngOnInit(): void {
-    this.favourites=this.favouritesservice.getfavourites();
+    this.favourites=this.favourite.getfavourites();
     console.warn(this.favourites);
   }
 
   removefavourites(id:any){
-    this.favouritesservice.deletefavourites(id);
+    this.favourite.deletefavourites(id);
   }
 }
